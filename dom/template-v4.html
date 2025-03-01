@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template V1</title>
+    <title>Template V4</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
@@ -11,6 +11,10 @@
         <p>
             {{titulo}}
         </p>
+        <p>
+            {{saudacao()}}
+        </p>
+        <a v-bind:href="link">Google</a>
     </div>
 
 
@@ -19,6 +23,12 @@
             el: '#app',
             data: {
                 titulo: 'Usando VueJS!',
+                link: 'http://google.com.br',
+            },
+            methods: {
+                saudacao: function () {
+                    return this.titulo;
+                }
             }
         })
     </script>

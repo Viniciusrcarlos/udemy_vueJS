@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template V1</title>
+    <title>Template V3</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     <div id="app">
         <p>
             {{titulo}}
+        </p>
+        <p>
+            {{saudacao()}}
         </p>
     </div>
 
@@ -19,6 +22,11 @@
             el: '#app',
             data: {
                 titulo: 'Usando VueJS!',
+            },
+            methods: {
+                saudacao: function () {
+                    return this.titulo;
+                }
             }
         })
     </script>
